@@ -1,0 +1,74 @@
+.main {
+    &__new-magzine {
+        margin-bottom: 36px;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        margin-bottom: 36px;
+    }
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 36px;
+
+    color:#fff;
+    background-color: #55c97b;
+    border-radius: 5px;
+
+    transition-duration: .5s;
+    &:hover {
+        color:#55c97b;
+        background-color: #fff;
+        border: 1px solid #55c97b;
+    }
+}
+
+.btn__delete {
+    width: 20px;
+    height: 20px;
+    background-color: #f3270c;
+    &:hover, 
+    &:focus {
+        color:#f3270c;
+        background-color: #fff;
+        border: 1px solid #f3270c;
+    }
+}
+.btn__add {
+    background-color: #6767cc;
+    &:hover, 
+    &:focus {
+        color:#6767cc;
+        background-color: #fff;
+        border: 1px solid #6767cc;
+    }
+}
+
+
+
+@media (min-width: $screen-table) {
+    .btn {
+        &__icon{
+            font-size: 14px;
+        }
+    
+        &__text{
+            display: inline-block;
+            font-size: 12px;
+        }
+    }
+}
+
+@media (min-width: $screen-desktop) {
+
+}
+
+

@@ -1,0 +1,142 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__logo {
+        order:3;
+    }
+    &__search {
+        order:2;
+    }
+
+    &__burger {
+        order:1;
+    }
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+    width: 42px;
+    &__elem {
+        width: 42px;
+        height: 4px;
+        background-color: #7b7b7b;
+
+        position: relative;
+
+        border-radius: 4px;
+        transition-duration: .5s;
+        &:hover {
+            background-color: #6767cc;
+        }
+        &::after,
+		&::before {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			height: 4px;
+	
+			background-color: #7b7b7b;
+
+            border-radius: 4px;
+            transition-duration: .5s;
+		}
+		&::after{
+			top:12px;
+			width: 32px;
+		}
+		&::before{
+			top:-12px;
+			width: 42px;
+		}
+		&:hover::after{
+            background-color: #6767cc;
+		}
+		&:hover::before{
+            background-color: #6767cc;
+		}
+    
+    }
+
+
+
+}
+
+.search {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    &__input{
+        max-width: 600px;
+        width: 100%;
+        height: 30px;
+        padding: 0 70px 0 20px;
+        border-radius: 5px;
+    }
+    &__btn{
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 70px;
+        height: 30px;
+
+        color: #fff;
+        
+        background-color: #55c97b;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        transition-duration: .5s;
+        &:hover, 
+        &:focus {
+            color:#55c97b;
+            background-color: #fff;
+        }
+        &:active {
+            color:#fff  ;
+            background-color: #55c97b ;
+        }
+    }
+}
+
+@media (min-width: $screen-table) {
+
+    .header {
+        max-width: 1000px;
+        &__logo {
+            display:none;
+        }
+
+        &__burger {
+            order:1;
+        }
+    }
+
+}
+
+@media (min-width: $screen-desktop) {
+    .header {
+        max-width: 1140px;
+        align-items: flex-start;
+        justify-content: center;
+        &__logo {
+            display: none;
+        }
+    
+        &__burger {
+            display: none;
+        }
+    }
+
+}

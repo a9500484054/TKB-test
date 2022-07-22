@@ -1,0 +1,86 @@
+.table {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 10px;
+    
+    &__row {
+        position: relative;
+        display: grid; 
+        grid-auto-flow: column; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr 1fr 0.5fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 5px;
+        margin-bottom: 20px;
+        padding: 10px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+    &__col {
+        max-width: 300px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 12px;
+    }
+    &__input {
+        max-width: 200px;
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        border: none;
+        border: 1px solid rgb(212, 212, 212);
+        border-radius: 5px;
+        &--yaer {
+            max-width: 50px;
+        }
+        &--textarea {
+            max-width: 100%;
+            height: 70px;
+            
+        }
+        &--select {
+            padding: 0;
+        }
+    }
+    &__content {
+        padding-top: 30px;
+        border-top: 2px solid #f8faff;
+    }
+    &__col {
+        font-size: 12px;        
+    }
+    &__del {
+        position: absolute;
+        right: 0;
+        opacity: 0;
+    }
+    &__wrap-btn {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.table__row:hover .table__del {
+    opacity: 1;
+}
+
+@media (min-width: $screen-table) {
+    .table {
+        padding: 40px 20px;
+        &__title {
+            font-size: 16px;
+        }
+        &__col {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: $screen-desktop) {
+    .table {
+
+    }
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/min-main.css">
+  </head>
+  <body>
+    <!-- хедер -->
+    <header class="header">
+
+            <a class="logo header__logo" href="#">
+                <img src="img/svg/logo.svg" alt="лого"/>
+            </a>
+            
+            <div class="search header__search">
+                <input class="search__input" type="search">
+                <button class="search__btn">поиск</button>
+            </div>
+
+            <button class="burger header__burger">
+                <span class="burger__elem"></span>
+                <span class="visually-hidden">кнопка меню</span>
+            </button>
+
+    </header>
+    <!-- Боковая панель -->
+    <aside class="aside">
+
+        <div class="aside__title-wrap">
+            <a class="aside__logo logo" href="#">
+                <img src="img/svg/logo.svg" alt="лого"/>
+            </a>
+            <button class="aside-close">
+                <i class=" icon-cancel-1"></i>
+                <span class="visually-hidden">закрыть</span>
+            </button>
+        </div>
+
+        <nav class="navigation-menu aside__navigation-menu">
+            <ul class="navigation-menu__list">
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-web-page-home"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Главная</a>
+                </li>
+                <li class="navigation-menu__item navigation-menu__item--active">
+                    <i class="navigation-menu__icon icon-piechart"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Сотрудники</a>
+                </li>
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-piee"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Статистика</a>
+                </li>
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-megaphone"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Баланс</a>
+                </li>
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-wallet"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>FAQ</a>
+                </li>
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-music"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Техподдержка</a>
+                </li>
+                <li class="navigation-menu__item">
+                    <i class="navigation-menu__icon icon-logout"></i>
+                    <a class="navigation-menu__link" href="#"><i></i>Выход</a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- Главная -->
+    <main>
+        <!-- Секция с главным контентом -->
+        <section class="main">
+
+            <h2 class="main__title">Сотрудники</h2>
+
+            <form action="#" id="employees-form">
+
+                <div class="table">
+
+                    <!-- Заголовки таблицы -->
+                    <ul class="table__row">
+                        <li class="table__title">ФИО</li>
+                        <li class="table__title">Должность</li>
+                        <li class="table__title">Возраст</li>
+                        <li class="table__title">Компетенция</li>
+                    </ul>
+
+                    <!-- Форма для заполнения -->
+                    <ul class="table__row">
+                        <li class="table__col">
+                            <input class="table__input" name="name" type="text">
+                        </li>
+                        <li class="table__col">
+                            <select class="table__input table__input--select" name="position">
+                                <option value="Аналитик">Аналитик</option>
+                                <option value="Менеджер">Менеджер</option>
+                                <option value="Программист">Программист</option>
+                                <option value="Юрист">Юрист</option>
+                            </select>
+                        </li>
+                        <li class="table__col">
+                            <input class="table__input table__input--yaer" name="years" type="number"  step="1" min="1" max="99" name="competence">
+                        </li>
+                        <li class="table__col">
+                            <textarea class="table__input table__input--textarea" name="competence"></textarea>
+                        </li>
+                    </ul>
+
+                    <!-- Блок для данных -->
+                    <div class="table__content"></div>
+
+                    <!-- Обертка для кнопок -->
+                    <div class="table__wrap-btn">
+                        <button class="btn btn__send" type="button">
+                            <span class="btn__text">Отправить</span>
+                        </button>
+                        <button class="btn btn__add" type="submit">
+                            <span class="btn__text">Добавить</span>
+                        </button>
+                    </div>
+                </div>             
+            </form>
+
+        </section>
+    </main>
+    <!-- Подвал -->
+    <footer class="footer">
+        Все права защищены © Савино Алексей Олегович, 2022
+    </footer>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/min-app.js"></script>
+</body>
+</html>

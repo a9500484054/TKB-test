@@ -1,0 +1,81 @@
+.error {
+    border-color: #f3270c;
+    &--name {
+        position: relative;
+        &::after {
+            content: 'Ошибка ввода! Пример: Фамилия Имя / Фамилия Имя Отчесвто';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            font-size: 8px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+    &--number {
+        position: relative;
+        &::after {
+            content: 'Ошибка ввода! Дату можно вводить от 18 до 65 лет';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            font-size: 8px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+    &--competence {
+        position: relative;
+        &::after {
+            content: 'Ошибка ввода! Разрешено число символов от 4 до 30 шт';
+            position: absolute;
+            top: 76px;
+            left: 0;
+            font-size: 8px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+    &--filling {
+        position: relative;
+        &::after {
+            content: 'Не все поля заполнены';
+            position: absolute;
+            top: -18px;
+            left: 0;
+            font-size: 12px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+    &--send {
+        position: relative;
+        &::after {
+            content: 'Поля заполнены с ошибкой';
+            position: absolute;
+            top: -18px;
+            left: 0;
+            font-size: 10px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+    &--main-send {
+        position: relative;
+        &::after {
+            content: 'данных нет';
+            position: absolute;
+            top: -18px;
+            left: 0;
+            font-size: 12px;
+            display: inline-block;
+            width: 100%;
+            color: #f3270c;
+        }
+    }
+}
